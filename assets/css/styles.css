@@ -13,7 +13,7 @@ header,
 .header {
   max-width: 100%;
   min-height: 585px;
-  background-image: url("../images/Optimized-header-background.png");
+  background-image: url("../images/header-background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
