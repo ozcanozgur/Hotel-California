@@ -1,0 +1,64 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  max-width: 100%;
+  min-height: 585px;
+  background-image: url("../images/header-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerContent {
+  margin-top: 60px;
+  height: 250px;
+  background-color: red;
+}
+
+.about {
+  width: 100%;
+  min-height: 650px;
+  background-color: rgba(218, 242, 254, 1);
+}
+
+.aboutImage {
+  min-width: 100%;
+  max-height: 530px;
+  height: auto;
+}
+
+.activity {
+  width: 100%;
+  background-color: rgba(192, 137, 184, 1);
+}
+
+.activityImage {
+  background-color: white;
+  padding: 4px;
+  width: 225px;
+  height: 225px;
+  border-radius: 225px;
+}
+
+.activityText {
+  background-color: rgba(235, 157, 196, 1);
+  border-left: 10px solid;
+  border-top: 10px solid;
+  border-left-color: rgba(213, 146, 191, 1);
+  border-top-color: rgba(213, 146, 191, 1);
+}
+
+.btnBox {
+  background-color: rgba(47, 59, 68, 1);
+  border-radius: 5px;
+}
