@@ -42,19 +42,19 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link text-light" id="mainPage" href="#main"
+              <li class="nav-item">
+                <a class="nav-link text-light active" id="mainPage" href="#main"
                   >ANA SAYFA <span class="sr-only">(current)</span></a
                 >
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <div class="">
                   <a class="nav-link text-light" id="aboutPage" href="#about"
                     >OTELİMİZ <span class="sr-only">(current)</span></a
                   >
                 </div>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a
                   class="nav-link text-light"
                   id="activityPage"
@@ -268,6 +268,13 @@
           </div>
         </div>
       </div>
+      <div id="myDIV">
+        <button class="btn">1</button>
+        <button class="btn active">2</button>
+        <button class="btn">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -288,23 +295,19 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var element;
-      var idNames = ["mainPage", "aboutPage", "activityPage"];
-      document.getElementById("mainPage").addEventListener("click", () => {
-        document.getElementById(idNames[0]).classList.add("btnBox");
-        document.getElementById(idNames[1]).classList.remove("btnBox");
-        document.getElementById(idNames[2]).classList.remove("btnBox");
-      });
-      document.getElementById("aboutPage").addEventListener("click", () => {
-        document.getElementById(idNames[1]).classList.add("btnBox");
-        document.getElementById(idNames[0]).classList.remove("btnBox");
-        document.getElementById(idNames[2]).classList.remove("btnBox");
-      });
-      document.getElementById("activityPage").addEventListener("click", () => {
-        document.getElementById(idNames[2]).classList.add("btnBox");
-        document.getElementById(idNames[1]).classList.remove("btnBox");
-        document.getElementById(idNames[0]).classList.remove("btnBox");
-      });
+      var btnConatiner = document.getElementById("navbarSupportedContent");
+
+      //var buttons = btnConatiner.getElementsByClassName("nav-link");
+      var buttons = btnConatiner.getElementsByTagName("a");
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+          console.log(this.className);
+        });
+      }
     </script>
   </body>
 </html>

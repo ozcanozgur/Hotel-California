@@ -58,7 +58,7 @@ header,
   border-top-color: rgba(213, 146, 191, 1);
 }
 
-.btnBox {
+.active {
   background-color: rgba(47, 59, 68, 1);
   border-radius: 5px;
 }
