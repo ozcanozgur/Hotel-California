@@ -43,19 +43,22 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link text-light btnBox" href="#main"
+                <a class="nav-link text-light" id="mainPage" href="#main"
                   >ANA SAYFA <span class="sr-only">(current)</span></a
                 >
               </li>
               <li class="nav-item active">
                 <div class="">
-                  <a class="nav-link text-light" href="#about"
+                  <a class="nav-link text-light" id="aboutPage" href="#about"
                     >OTELİMİZ <span class="sr-only">(current)</span></a
                   >
                 </div>
               </li>
               <li class="nav-item active">
-                <a class="nav-link text-light" href="#activity"
+                <a
+                  class="nav-link text-light"
+                  id="activityPage"
+                  href="#activity"
                   >AKTİVİTELER <span class="sr-only">(current)</span></a
                 >
               </li>
@@ -284,5 +287,24 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var element;
+      var idNames = ["mainPage", "aboutPage", "activityPage"];
+      document.getElementById("mainPage").addEventListener("click", () => {
+        document.getElementById(idNames[0]).classList.add("btnBox");
+        document.getElementById(idNames[1]).classList.remove("btnBox");
+        document.getElementById(idNames[2]).classList.remove("btnBox");
+      });
+      document.getElementById("aboutPage").addEventListener("click", () => {
+        document.getElementById(idNames[1]).classList.add("btnBox");
+        document.getElementById(idNames[0]).classList.remove("btnBox");
+        document.getElementById(idNames[2]).classList.remove("btnBox");
+      });
+      document.getElementById("activityPage").addEventListener("click", () => {
+        document.getElementById(idNames[2]).classList.add("btnBox");
+        document.getElementById(idNames[1]).classList.remove("btnBox");
+        document.getElementById(idNames[0]).classList.remove("btnBox");
+      });
+    </script>
   </body>
 </html>
